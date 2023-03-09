@@ -7,6 +7,10 @@
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 48, 144 )
+GRAVITY = 300
+
+[node name="CameraFollow" parent="Player" index="3"]
+remote_path = NodePath("../../Camera")
 
 [node name="Brick" parent="." instance=ExtResource( 1 )]
 position = Vector2( 80, 160 )
@@ -28,3 +32,11 @@ position = Vector2( 0, 160 )
 
 [node name="Brick7" parent="." instance=ExtResource( 1 )]
 position = Vector2( 16, 160 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 40, 144 )
+current = true
+smoothing_enabled = true
+smoothing_speed = 2.0
+
+[editable path="Player"]
