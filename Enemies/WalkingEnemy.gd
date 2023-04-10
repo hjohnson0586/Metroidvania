@@ -2,7 +2,7 @@ extends "res://Enemies/Enemy.gd"
 
 enum DIRECTION {LEFT = -1, RIGHT = 1}
 
-export (DIRECTION) var WALKING_DIRECTION
+export (DIRECTION) var WALKING_DIRECTION = DIRECTION.RIGHT
 
 var state
 
@@ -29,3 +29,4 @@ func _physics_process(delta):
 				
 	sprite.scale.x = sign(motion.x)
 	motion = move_and_slide_with_snap(motion, Vector2.DOWN * 4, Vector2.UP, true, 4, deg2rad(46))
+	if abs(motion.x) == abs(MAX_SPEED): motion.y = 0
