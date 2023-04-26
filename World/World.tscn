@@ -16,7 +16,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CameraFollow" parent="Player" index="3"]
+[node name="CameraFollow" parent="Player" index="4"]
 remote_path = NodePath("../../Camera")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="Player"]
@@ -51,5 +51,6 @@ position = Vector2( 224, 112 )
 position = Vector2( 272, 112 )
 
 [editable path="Player"]
+[editable path="Player/Hurtbox"]
 [editable path="MovingPlatforms"]
 [editable path="MovingPlatforms2"]
