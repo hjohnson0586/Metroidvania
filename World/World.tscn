@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/TileMap.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://World/MovingPlatforms.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/UpDown.tres" type="Curve2D" id=6]
 [ext_resource path="res://Enemies/WalkingEnemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=8]
 
 [node name="World" type="Node"]
 script = ExtResource( 3 )
@@ -47,6 +48,8 @@ position = Vector2( 224, 112 )
 
 [node name="WalkingEnemy2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 272, 112 )
+
+[node name="UI" parent="." instance=ExtResource( 8 )]
 
 [editable path="Player"]
 [editable path="Player/Hurtbox"]
