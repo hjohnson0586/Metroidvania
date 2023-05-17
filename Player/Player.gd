@@ -172,7 +172,7 @@ func wall_slide_check():
 		state = WALL_SLIDE
 		double_jump = true
 
-func get_wall_access():
+func get_wall_axis():
 	var is_right_wall = test_move(transform, Vector2.RIGHT)
 	var is_left_wall = test_move(transform, Vector2.LEFT)
 	return int(is_left_wall) - int(is_right_wall)
