@@ -3,7 +3,7 @@ extends Node
 
 signal enemy_died
 
-export(int) var max_health = 1
+export(int) var max_health = 2
 onready var health = max_health setget set_health
 
 func set_health(value):
